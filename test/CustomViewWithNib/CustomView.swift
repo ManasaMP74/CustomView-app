@@ -16,12 +16,16 @@ class CustomView: UIView {
         view.backgroundColor = UIColor.blue
     }
 
+    // calling of loadNib() method is not required here.
+    // this initializer will call init(frame: CGRect) any how we are calling loadnib in that method.
+    //for demo purpose i added in every places.
     init (labelText: String) {
         super.init(frame: .zero)
         let view = loadNib()
         view.backgroundColor = UIColor.green
     }
 
+    //don't call loadNib() method here, if you added class name to view.
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
